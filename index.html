@@ -6,13 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    /* ===== Page background ===== */
     body {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 60%);
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.6;
       color: #111;
+    }
+
+    /* ===== Main content card ===== */
+    .page {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 50px 60px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      line-height: 1.6;
     }
 
     h1 {
@@ -53,83 +65,76 @@
 
 <body>
 
-  <h1>Hanfeng Huang</h1>
-  <div class="subtitle">
-    Undergraduate Student, Mathematics<br>
-    Shanghai Jiao Tong University
+  <div class="page">
+
+    <h1>Hanfeng Huang</h1>
+    <div class="subtitle">
+      Undergraduate Student, Mathematics<br>
+      Shanghai Jiao Tong University
+    </div>
+
+    <p>
+      I am a senior undergraduate student majoring in Mathematics and Applied Mathematics
+      at Shanghai Jiao Tong University. I am interested in differential geometry,
+      symplectic geometry, and geometric aspects of Lie theory.
+    </p>
+
+    <p>
+      I am currently preparing applications for PhD programs in pure mathematics.
+    </p>
+
+    <h2>Research Interests</h2>
+
+    <ul>
+      <li>Differential geometry and geometric flows</li>
+      <li>Symplectic geometry and Hamiltonian group actions</li>
+      <li>Lie groups, Lie algebras, and coadjoint orbits</li>
+      <li>Geometric representation theory</li>
+    </ul>
+
+    <h2>Current Work</h2>
+
+    <p>
+      I am currently studying the geometry of coadjoint orbits of real symplectic groups,
+      focusing on explicit geometric realizations and their relations to Hamiltonian dynamics.
+    </p>
+
+    <h2>Notes</h2>
+
+    <ul>
+      <li>
+        <a href="notes/hamiltonian-actions.pdf">
+          Notes on Hamiltonian Group Actions and Moment Maps
+        </a><br>
+        <span class="note-meta">Unpublished notes, 2025</span>
+      </li>
+
+      <li>
+        <a href="notes/semidirect-products.pdf">
+          Semidirect Products and Classical Transformation Groups
+        </a><br>
+        <span class="note-meta">Expository notes</span>
+      </li>
+
+      <li>
+        Notes on Coadjoint Orbits of Real Symplectic Groups<br>
+        <span class="note-meta">In preparation</span>
+      </li>
+    </ul>
+
+    <h2>Curriculum Vitae</h2>
+
+    <p>
+      <a href="cv.pdf">Curriculum Vitae (PDF)</a>
+    </p>
+
+    <h2>Contact</h2>
+
+    <p>
+      Email: yourname [at] sjtu.edu.cn
+    </p>
+
   </div>
-
-  <p>
-    I am a senior undergraduate student majoring in Mathematics and Applied Mathematics
-    at Shanghai Jiao Tong University. I am interested in differential geometry,
-    symplectic geometry, and geometric aspects of Lie theory.
-  </p>
-
-  <p>
-    I am currently preparing applications for PhD programs in pure mathematics.
-  </p>
-
-  <!-- ===================== -->
-  <h2>Research Interests</h2>
-  <!-- ===================== -->
-
-  <ul>
-    <li>Differential geometry and geometric flows</li>
-    <li>Symplectic geometry and Hamiltonian group actions</li>
-    <li>Lie groups, Lie algebras, and coadjoint orbits</li>
-    <li>Geometric representation theory (in a broad sense)</li>
-  </ul>
-
-  <!-- ===================== -->
-  <h2>Current Work</h2>
-  <!-- ===================== -->
-
-  <p>
-    I am currently studying the geometry of coadjoint orbits of real symplectic groups,
-    with a focus on explicit geometric realizations and their relations to Hamiltonian
-    dynamics.
-  </p>
-
-  <!-- ===================== -->
-  <h2>Notes</h2>
-  <!-- ===================== -->
-
-  <ul>
-    <li>
-      <a href="notes/hamiltonian-actions.pdf">
-        Notes on Hamiltonian Group Actions and Moment Maps
-      </a><br>
-      <span class="note-meta">Unpublished notes, 2025</span>
-    </li>
-
-    <li>
-      <a href="notes/semidirect-products.pdf">
-        Semidirect Products and Classical Transformation Groups
-      </a><br>
-      <span class="note-meta">Expository notes</span>
-    </li>
-
-    <li>
-      Notes on Coadjoint Orbits of Real Symplectic Groups<br>
-      <span class="note-meta">In preparation</span>
-    </li>
-  </ul>
-
-  <!-- ===================== -->
-  <h2>Curriculum Vitae</h2>
-  <!-- ===================== -->
-
-  <p>
-    <a href="cv.pdf">Curriculum Vitae (PDF)</a>
-  </p>
-
-  <!-- ===================== -->
-  <h2>Contact</h2>
-  <!-- ===================== -->
-
-  <p>
-    Email: yourname [at] sjtu.edu.cn
-  </p>
 
 </body>
 </html>
