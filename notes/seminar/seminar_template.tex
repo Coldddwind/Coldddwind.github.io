@@ -1,0 +1,137 @@
+% Seminar note temvlate
+% Usage: vlace your content in the sections below and run `vdflatex seminar_temvlate.tex`
+\documentclass[11vt,a4vaver]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+
+% Header / footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Seminar notes}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% Theorem-like environments (optional)
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+% Document info - edit these
+\title{Some Discussion for a tyve of Generalized Heisenberg Lie Algebra}
+\author{Hanfeng Huang}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+% 摘要：簡短描述本次報告/讀書會的核心內容與結論（3–6 行）。
+In this note, we study a class of step two nilpotent Lie algebras arising
+from a linear space equipped with a constant Poisson structure, which could 
+be realized as a generalized Heisenberg Lie algebra. We discuss the structure of these algebras, 
+associating the singular point of its coadjoint orbit to the affine variety.
+
+\end{abstract}
+
+% 目錄
+\tableofcontents
+\vspace{1em}
+
+% 建議結構：Introduction -> Main Sections -> Discussion -> References
+\section{Preliminary}
+\label{sec:intro}
+% 背景、問題動機、講者與議題概述
+In this section, we briefly review some basic notion of Poisson manifolds, and discuss some 
+properties of constant Poisson structure on a finite dimensional linear space.
+
+\subsection{Poisson Manifold and Hamiltonian vector field}
+
+\begin{definition}[Poisson       manifold]
+    A Poisson manifold $(\mathcal{M}, \{\cdot,\cdot\})$is a smooth manifold $\mathcal{M} $ equipped with a 
+    bilinear operation $\{\cdot,\cdot\}: \mathcal{C} ^\infty(\mathcal{M} ) \times \mathcal{C} ^\infty(\mathcal{M} ) 
+    \to \mathcal{C} ^\infty(\mathcal{M} )$, called the Poisson bracket, satisfying the following properties:
+    \begin{enumerate}
+        \item Skew-symmetry: $\{f,g\} = -\{g,f\}$ for all $f,g \in \mathcal{C} ^\infty(\mathcal{M} )$.
+        \item Jacobi identity: $\{f,\{g,h\}\} + \{g,\{h,f\}\} + \{h,\{f,g\}\} = 0$ for all $f,g,h \in \mathcal{C} ^\infty(\mathcal{M} )$.
+        \item Leibniz rule: $\{f,gh\} = g\{f,h\} + h\{f,g\}$ for all $f,g,h \in \mathcal{C} ^\infty(\mathcal{M} )$.
+    \end{enumerate}
+\end{definition}
+
+
+
+\begin{definition}[Hamiltonian vector field]
+    Given a Poisson manifold $(\mathcal{M}, \{\cdot,\cdot\})$ and a smooth function $H \in \mathcal{C} ^\infty(\mathcal{M} )$, 
+    the Hamiltonian vector field $X_H$ associated with $H$ is defined by the relation
+    \[
+        <df, X_H> = \{f,H\}, \quad \forall f \in \mathcal{C} ^\infty(\mathcal{M} ),
+    \]
+    where $<\cdot,\cdot>$ denotes the natural pairing between differential forms and vector fields.
+\end{definition}
+
+\subsection{Constant Poisson structure on a linear space}
+
+\begin{definition}[Constant Poisson structure]
+    Let $V$ be a finite dimensional linear space over $\mathbb{R}$ , 
+    and let $\{\cdot,\cdot\}$ be a Poisson bracket on $V$. 
+    We say that the Poisson structure is constant if the 
+    Poisson bracket of any two linear functions on $V$ is constant. 
+    In other words, for any linear functions 
+    $\xi,\eta\in V^*$, we have $\{\xi,\eta\} \in \mathbb{R}$.
+\end{definition}
+
+Since the bracket with any constant function is zero, 
+the bracket actually defines a skew-symmetric bilinear form $\Omega$
+on the dual space $V^*$ by $\Omega(\xi,\eta) := \{\eta,\xi\}$. 
+One can check that the Jacobi identity is automatically satisfied for a constant Poisson structure,
+and thus the Poisson         bracket is completely determined 
+by the skew-symmetric bilinear form $\Omega$ on $V^*$ once we identify the tangent space $T_vV$
+of $V$ at any point $v\in V$ with $V$ itself and its double dual $V^{**}$, and also
+the differential $d_v\xi$ of any linear function $\xi\in V^*$ with $\xi$
+itself. 
+Note that 
+the Hamiltonian vector field $X_\xi$  is given by
+$\Omega_\sharp(\xi):=\iota_{X_\xi}\Omega\in V$, 
+which is a constant vector field on $V$.
+
+Next we restrict our attention to the space of all symmetric 
+bilinear forms on $V$, denoted by $\text{S}^2(V)$. For $\sigma \in
+\text{S}^2(V)$, write $\sigma(v)=\frac{1}{2}\sigma(v,v)$ as a smooth 
+function on $V$. Note that $d_v\sigma= \iota_v \sigma\in T^*_vV 
+\cong V^*$. 
+
+We first compute the bracket of two quadratic $\sigma_1,\sigma_2$:
+\begin{align*}
+    \{\sigma_1,\sigma_2\}(v)&=<d_v{\sigma_1},X_{\sigma_2}(v)>=
+    <\iota_v\sigma_1,X_{\sigma_2}(v)>=\{\iota_v\sigma_1,\sigma_2\}(v)\\
+    &=-\{\sigma_2,\iota_v\sigma_1\}(v)=-<d_v\sigma_2,X_{\iota_v\sigma_1}(v)>=
+    -<\iota_v\sigma_2,X_{\iota_v\sigma_1}(v)>\\
+    &=-\{\iota_v\sigma_2,\iota_v\sigma_1\}=\{\iota_v\sigma_1,\iota_v\sigma_2\}
+        \end{align*}
+    
+
+We first compute the bracket of a quadratic function $\sigma$ and a 
+linear function $\xi$:
+\begin{align}
+    \{\sigma,\xi\}(v) &= <d_v\sigma, X_\xi>=\sigma(v,X_\xi)=<\iota_{X_\xi}\sigma, v> .
+    \end{align} 
+    The formula above shows that the bracket $\{\sigma,\xi\}$ 
+    is a linear function.
+
+
+
+
+
+
+\end{document}
